@@ -4,12 +4,34 @@
 		<meta charset="utf-8">
 		<title>background-effect-app</title>
 		<style>
-			body { margin: 0; }
-			canvas { display: block; }
+			body {
+				margin: 0;
+				padding: 0;
+				}
+
+			#canvas {
+				display: block;
+				position: relative;
+			}
+
+			h1 {
+				color: #5F9EA0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, 50%);
+				margin: 0;
+				mix-blend-mode: difference;
+				font-size: 3em;
+				font-family: Cambria, Cochin, Gerogia, Times;
+			}
+
 		</style>
 	</head>
 	<body>
-		<canvas id="myCanvas"></canvas>
+		<div id="canvas">
+			<h1>Particle</h1>
+		</div>
 		<script src="app.js"></script>
 	</body>
 </html>
