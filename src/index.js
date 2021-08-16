@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js'
 
 (() =>  {
     const canvas = document.getElementById('canvas')
@@ -18,6 +19,9 @@ import * as THREE from 'three';
 
     camera.position.z = 5
     scene.add(camera)
+
+    const controls = new OrbitControls(camera, renderer.domElement)
+    controls.ennableDamping = true
 
     const geometry = new THREE.BufferGeometry()
     const count = 1000
